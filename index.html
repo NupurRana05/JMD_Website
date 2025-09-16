@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JMD Garba Dresses</title>
+  <style>
+    :root{--brand:#c2185b;--accent:#f8bbd0;--card-bg:#fff;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;color:#222;background:linear-gradient(180deg,#fff 0%, #fff 60%, #faf8ff 100%)}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:50}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--brand)}
+    .brand .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--brand),#8e24aa);display:inline-flex;align-items:center;justify-content:center;color:white}
+    nav ul{display:flex;gap:14px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:#333;font-weight:600}
+    nav a:hover, nav a.active{background:var(--accent)}
+    .hero{padding:48px 0;display:flex;gap:28px;align-items:center}
+    .hero-text h1{font-size:28px;margin:0 0 8px}
+    .hero-text p{color:var(--muted);margin:0}
+    .collections{display:flex;gap:16px;margin-top:18px}
+    .collection-btn{background:#fff;border:1px solid #eee;padding:10px 14px;border-radius:10px;cursor:pointer}
+
+    /* Sections */
+    section{padding:40px 0}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+
+    /* Card */
+    .card{background:var(--card-bg);border-radius:12px;box-shadow:0 6px 18px rgba(30,30,40,0.06);overflow:hidden;border:1px solid #f0f0f0}
+    .card img{width:100%;height:220px;object-fit:cover;display:block}
+    .card .content{padding:12px}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card .actions{display:flex;gap:8px;margin-top:12px}
+    .btn{padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--brand);color:white}
+    .btn-outline{background:white;border:1px solid #ddd}
+
+    /* Footer */
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal{background:white;border-radius:12px;max-width:540px;width:100%;padding:18px}
+    .modal h2{margin:0 0 8px}
+    .field{display:flex;flex-direction:column;margin-bottom:10px}
+    .field label{font-size:13px;color:#444;margin-bottom:6px}
+    .field input,.field textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    .note{font-size:13px;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:720px){.hero{flex-direction:column;align-items:flex-start}.card img{height:180px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">JMD</div>
+        <div>
+          <div>JMD Garba Dresses</div>
+          <small style="color:var(--muted);font-weight:600">Traditional • Festive • Premium</small>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link" data-target="home">Home</a></li>
+          <li><a href="#boys" class="nav-link" data-target="boys">Boys Collection</a></li>
+          <li><a href="#girls" class="nav-link active" data-target="girls">Girls Collection</a></li>
+          <li><a href="#kid" class="nav-link" data-target="kid">Kid Collection</a></li>
+          <li><a href="#about" class="nav-link" data-target="about">About Us</a></li>
+          <li><a href="#contact" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Welcome to JMD Garba Dresses</h1>
+        <p>Discover premium, hand-picked Garba outfits for every family member. Click a collection to browse handpicked items.</p>
+        <div class="collections">
+          <button class="collection-btn" data-scroll-to="boys">Boys Collection</button>
+          <button class="collection-btn" data-scroll-to="girls">Girls Collection</button>
+          <button class="collection-btn" data-scroll-to="kid">Kid Collection</button>
+        </div>
+      </div>
+      <div style="flex:1;text-align:right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6w82_IikJgCGiIAv10Kmtsz0BtW25oDTI_Q&s"
+         alt="hero" style="border-radius:12px;max-width:100%;height:auto;box-shadow:0 10px 30px rgba(0,0,0,0.06)">
+      </div>
+    </section>
+
+    <!-- Boys Section (example minimal) -->
+    <section id="boys">
+      <div class="section-title">
+        <h2>Boys Collection</h2>
+        <div class="note">Traditional and comfortable — perfect for Garba nights.</div>
+      </div>
+      <div class="grid">
+        <!-- Two example cards -->
+        <div class="card">
+          <img src="https://blog.g3fashion.com/wp-content/uploads/2022/04/BeFunky-collage.jpg" alt="boys1">
+          <div class="content">
+            <h3>Boy's Garba Dress Set - A</h3>
+            <p>Stylish Garba Dress.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Boy\'s Kurta Set - A')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Boy\'s Kurta Set - A')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://i.pinimg.com/736x/ac/0f/6f/ac0f6f42b817c3f230e2aafe7e887b21.jpg" alt="boys2">
+          <div class="content">
+            <h3>Boy's Garba Set - B</h3>
+            <p> stylish Garba Dandiya Night.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Boy\'s Kurta Set - B')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Boy\'s Kurta Set - B')">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Girls Section (USER asked click girls -> go here and show 5 cards) -->
+    <section id="girls">
+      <div class="section-title">
+        <h2>Girls Collection</h2>
+        <div class="note">Elegant lehengas and chaniya cholis — select and book offline payment.</div>
+      </div>
+      <div class="grid" id="girls-grid">
+        <!-- Five cards -->
+        <div class="card">
+          <img src="https://mahezon.in/cdn/shop/files/Navratri_Garba_Pink_Women_Kurti_Lehenga_Dress_1200x1200.png?v=1754918790" alt="girls1">
+          <div class="content">
+            <h3>Girls Lehengha - Pink Bloom</h3>
+            <p>Embroidered, size range available.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Girls Lehengha - Pink Bloom')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Girls Lehengha - Pink Bloom')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://gunjfashion.com/cdn/shop/files/red-viscose-rayon-mirror-work-traditional-garba-dress_3.jpg?v=1693831468" alt="girls2">
+          <div class="content">
+            <h3>Girls Chaniya Choli - Royal Red</h3>
+            <p>Traditional mirror work, fully lined.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Girls Chaniya Choli - Royal Red')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Girls Chaniya Choli - Royal Red')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/323770981/ZN/JI/HM/26436952/msg-1527953220-1325.jpg" alt="girls3">
+          <div class="content">
+            <h3>Girls Lehenga - Gold Spark</h3>
+            <p>Lightweight and festive.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Girls Lehenga - Gold Spark')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Girls Lehenga - Gold Spark')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://vjvnow.com/cdn/shop/files/green-navratri-lehenga-choli-with-embrodery-and-mirror-work-for-garba-nights-vjv-now-1.jpg?v=1740667010" alt="girls4">
+          <div class="content">
+            <h3>Girls Festive Set - Green Meadow</h3>
+            <p>Comfort fit, vibrant colors.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Girls Festive Set - Green Meadow')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Girls Festive Set - Green Meadow')">Book Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://ragthm.com/cdn/shop/files/photo_2025-07-05_14-26-30_2.jpg?v=1751882030" alt="girls5">
+          <div class="content">
+            <h3>Girls Embroidered Lehenga - Blue Wave</h3>
+            <p>Hand-stitched details, comfortable lining.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Girls Embroidered Lehenga - Blue Wave')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Girls Embroidered Lehenga - Blue Wave')">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kid Section -->
+    <section id="kid">
+      <div class="section-title">
+        <h2>Kid Collection</h2>
+        <div class="note">Cute and safe outfits for little ones.</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.news9live.com/wp-content/uploads/2023/09/Radha-dress-for-girl-radha-dress-for-kidsradha-makeupdandiya-dress.jpeg" alt="kid1">
+          <div class="content">
+            <h3>Kid's Festive Set</h3>
+            <p>Soft fabric and easy wear.</p>
+            <div class="actions">
+              <button class="btn btn-outline" onclick="openQuickView('Kid\'s Festive Set')">Quick View</button>
+              <button class="btn btn-primary" onclick="openBooking('Kid\'s Festive Set')">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-title">
+        <h2>About Us</h2>
+        <div class="note">JMD Garba Dresses - Crafting tradition since 20XX.</div>
+      </div>
+      <p style="color:var(--muted);line-height:1.6">At JMD Garba Dresses, we believe Garba is for everyone! That’s why we bring a wide range of beautifully designed Garba outfits for kids, women, and men. Our collection features the latest trends and vibrant traditional wear, crafted to make your celebrations even more special.
+
+From short and long lehengas, kathiyawadi dresses, stylish jackets, and umbrellas, we offer everything you need to shine during Garba nights. With new collections and endless variety, we ensure there’s a perfect outfit for every age, style, and occasion.
+
+Celebrate culture, tradition, and fashion with us – because Garba is for all! 💃🕺</p>
+    </section>
+
+    <!-- Contact (Booking) -->
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact & Book</h2>
+        <div class="note">Fill the form to request a booking. Payment will be received offline when you collect or on delivery.</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px">
+        <div>
+          <form id="contact-form" onsubmit="submitContact(event)">
+            <div class="field">
+              <label>Name</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="field">
+              <label>Phone / WhatsApp</label>
+              <input type="text" id="phone" required />
+            </div>
+            <div class="field">
+              <label>Message (e.g., size / item)</label>
+              <textarea id="message" rows="4"></textarea>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn btn-primary" type="submit">Send Booking Request</button>
+              <div class="note">We will call you to confirm. Offline payment only.</div>
+            </div>
+          </form>
+        </div>
+
+        <aside style="background:#fff;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04)">
+          <h3 style="margin-top:0">Visit / Contact</h3>
+          <p class="note">JMD Garba Dresses<br>Phone: +91-XXXXXXXXXX<br>Payment Mode: Offline (Cash / UPI on delivery)</p>
+          <p class="note">After you send a booking request we will call you to confirm availability and payment details.</p>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div class="note">© JMD Garba Dresses</div>
+        <div class="note">Designed to be simple, professional & mobile friendly</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Quick view modal & Booking modal -->
+  <div id="modal-backdrop" class="modal-backdrop">
+    <div class="modal" id="modal">
+      <button style="float:right;background:none;border:0;font-weight:700;font-size:18px;cursor:pointer" onclick="closeModal()">✕</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    // Navigation / scroll behavior
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const t = a.getAttribute('data-target');
+        document.getElementById(t).scrollIntoView({behavior:'smooth',block:'start'});
+        links.forEach(x=>x.classList.remove('active'));
+        a.classList.add('active');
+      })
+    })
+
+    // Buttons in hero
+    document.querySelectorAll('[data-scroll-to]').forEach(b=>{
+      b.addEventListener('click', ()=>{
+        const id = b.getAttribute('data-scroll-to');
+        document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+        // highlight nav
+        links.forEach(x=>x.classList.remove('active'));
+        document.querySelector('[data-target="'+id+'"]')?.classList.add('active');
+      })
+    })
+
+    // Quick view + Booking modal
+    function openQuickView(title){
+      const body = `<h2>${title}</h2><p class=\"note\">Detailed description will go here. Size, color & availability information.</p><div style=\"margin-top:12px;display:flex;gap:8px\"><button class=\"btn btn-primary\" onclick=\"openBooking(\'${title.replace(/\'/g,"\\'")}\')\">Book Now</button><button class=\"btn btn-outline\" onclick=\"closeModal()\">Close</button></div>`;
+      showModal(body);
+    }
+
+    function openBooking(title){
+      const body = `
+        <h2>Book: ${title}</h2>
+        <form onsubmit="handleBooking(event)" id="booking-form">
+          <div class=\"field\"><label>Name</label><input id=\"bk-name\" required></div>
+          <div class=\"field\"><label>Phone / WhatsApp</label><input id=\"bk-phone\" required></div>
+          <div class=\"field\"><label>Size / Notes</label><input id=\"bk-notes\"></div>
+          <div class=\"note\">Payment mode: Offline (cash / UPI) - JMD Garba Dresses will confirm the amount on call.</div>
+          <div style=\"margin-top:12px;display:flex;gap:8px\"><button class=\"btn btn-primary\" type=\"submit\">Send Booking</button><button class=\"btn btn-outline\" type=\"button\" onclick=\"closeModal()\">Cancel</button></div>
+        </form>
+      `;
+      showModal(body);
+    }
+
+    function showModal(html){
+      document.getElementById('modal-body').innerHTML = html;
+      document.getElementById('modal-backdrop').style.display = 'flex';
+    }
+    function closeModal(){
+      document.getElementById('modal-backdrop').style.display = 'none';
+    }
+
+    function handleBooking(e){
+      e.preventDefault();
+      const name = document.getElementById('bk-name').value;
+      const phone = document.getElementById('bk-phone').value;
+      // Here you would send to server. We'll simulate success.
+      document.getElementById('modal-body').innerHTML = `<h2>Thanks, ${name}!</h2><p class=\"note\">Your booking request is received. We will call ${phone} to confirm. Payment will be taken offline.</p><div style=\"margin-top:12px\"><button class=\"btn btn-primary\" onclick=\"closeModal()\">Close</button></div>`;
+    }
+
+    // Contact form submit
+    function submitContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const msg = document.getElementById('message').value;
+      // Simulate success
+      alert('Booking request sent. We will contact you at ' + phone + '. Payment will be received offline.');
+      e.target.reset();
+      // Scroll to top of contact
+      document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+    }
+
+    // On load: if hash present, scroll to that section
+    window.addEventListener('load', ()=>{
+      const hash = location.hash.replace('#','');
+      if(hash){
+        const el = document.getElementById(hash);
+        if(el) setTimeout(()=>el.scrollIntoView({behavior:'smooth'}),200);
+      }
+    })
+
+  </script>
+</body>
+</html>
